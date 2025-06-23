@@ -1,0 +1,8 @@
+%YAML:1.0
+queryType: "orb"
+imageFolderPath: "Path To Your Image Folder"
+descriptorsFilePath: "Path To Your ORB Feature File (must be .dat)"
+URLFilePath: "Path To Your URL File (must be .txt)"
+csvFilePath: "Path To dataset_modified.csv file"
+usingKmeans: 0
+centersFilePath: "Path To Your Codebook For ORB file (must be .dat)"

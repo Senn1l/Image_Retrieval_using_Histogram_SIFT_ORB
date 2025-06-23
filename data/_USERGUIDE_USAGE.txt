@@ -1,0 +1,34 @@
+0/ Mở thư mục cấu hình (YML)
+1/ Điều chỉnh file cấu hình
+- Thử với các cấu hình khác nhau (sao chép và dán vào file cấu hình)
+- Đường dẫn descriptorsFilePath của SIFT/ORB là file .dat
+- Chỉ riêng histogram là file .csv
+- File KMeans cũng phải là .dat
+
+2/ Sau đó mở CMD và chuyển đến thư mục chứa file thực thi
+- Trong trường hợp này là file retrieve.exe, dùng lệnh cd để chuyển thư mục.
+
+3/ Thêm file opencv_world490d.dll vào cùng thư mục với file thực thi
+- Nếu không thêm, chương trình sẽ báo lỗi thiếu file hoặc không thể xử lý.
+
+4/ Cách sử dụng: <file thực thi> <đường dẫn đến file cấu hình.yml>
+Lệnh này cần ít nhất 2 tham số.
+Nhớ thay thế <...> cho phù hợp
+Ví dụ:
+retrieve <...>/data/config/configHist.yml
+retrieve <...>/data/config/configOrb1.yml
+
+->Bắt đầu tạo các file đặc trưng (có thể mất đến 200 giây)
+->Sau đó đọc các file (tối đa 250ms)
+->Chuyển sang giai đoạn truy xuất (lên đến 19 giây với truy vấn SIFT thông thường)
+
+Nếu dùng KMeans:
+Bao gồm tất cả các bước trên và thêm:
+->Tạo và lưu codebook (file tâm) (tối đa 620 giây với SIFT)
+->Đọc codebook (tối đa 14 giây với SIFT)
+->Vào giai đoạn truy xuất (tối đa 200ms)
+
+5/ Để kiểm tra truy xuất, nhập đường dẫn của ảnh truy vấn (queryImagePath)
+- Thường thì chỉ cần nhập đúng đường dẫn ảnh truy vấn hợp lệ.
+
+6/ MAP thường được lưu ở cùng thư mục với file thực thi.

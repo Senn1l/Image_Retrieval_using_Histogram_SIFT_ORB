@@ -1,0 +1,25 @@
+- Histogram
++ Tạo file ~120s
++ Đọc file thành records ~3s
++ Truy vấn 1 ảnh ~140ms
+
+- ORB [144x256]
++ Tạo file ~153s
++ Đọc file thành desc và URL: ~90ms
++ Truy vấn 1 ảnh: ~7.5s
+
+- ORB - Kmeans [144x256], Clusters = 100
++ Làm và lưu codebook: 237s
++ Sử dụng codebook để map các descriptors thành codeword: ~1.5s
++ Truy vấn 1 ảnh: ~200ms
+
+- SIFT [144x256]
++ Tạo file ~181s
++ Đọc file thành desc và URL: ~200ms
++ Truy vấn 1 ảnh ~18s
+
+- SIFT - Kmeans [144x256], Clusters = 100
++ Làm và lưu codebook: 620s
++ Sử dụng codebook để map các descriptors thành codeword: 14s
++ Truy vấn 1 ảnh: 200ms so với thông thường 18s
+

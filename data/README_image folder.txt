@@ -1,0 +1,3 @@
+- Install images folder here: https://github.com/CipiOrhei/TMBuD/tree/main/images
+- After that remove 2 images from folders: 06514.png and 06515.png. (I moved it to notInCSV folder)
+- Check out the jupyter notebook [checkDataRetrieval] for the reason.

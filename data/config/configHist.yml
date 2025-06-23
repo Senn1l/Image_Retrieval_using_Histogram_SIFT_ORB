@@ -1,0 +1,5 @@
+%YAML:1.0
+queryType: "histogram"
+imageFolderPath: "Path To Your Image Folder"
+descriptorsFilePath: "Path To Your Histogram Descriptors File (must be .csv)"
+csvFilePath: "Path To dataset_modified.csv file"
